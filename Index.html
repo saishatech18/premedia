@@ -1,0 +1,1409 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Primary SEO Meta Tags -->
+        <title>Saisha Technologies | Strategic Procurement & Print Supply Chain</title>
+        <meta name="title" content="Saisha Technologies | Strategic Procurement & Print Supply Chain" />
+        <meta name="description" content="Moving enterprises from vendor reliance to strategic margin protection. We audit, optimize, and execute end-to-end packaging, POSM, and BFSI secure print at scale across India." />
+        <meta name="keywords" content="print supply chain, packaging consultancy, procurement audit, trade marketing POSM, CTU, danglers, passbooks, welcome kits, PAN India logistics, margin protection, vendor restructuring, Saisha Technologies" />
+        <meta name="author" content="Saisha Technologies" />
+        <link rel="canonical" href="https://www.saishatech.in/" />
+
+        <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.saishatech.in/" />
+        <meta property="og:title" content="Saisha Technologies | Strategic Procurement & Print" />
+        <meta property="og:description" content="Moving enterprises from vendor reliance to strategic margin protection. We audit, optimize, and execute end-to-end packaging and POSM across India." />
+        <meta property="og:image" content="https://www.saishatech.in/STPL_Logo.png" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="Saisha FAVICON.png" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ["Inter", "sans-serif"],
+                        },
+                        colors: {
+                            saisha: {
+                                black: "#050505",
+                                dark: "#111111",
+                                gray: "#888888",
+                                light: "#f5f5f7",
+                                blue: "#0056b3",
+                                orange: "#f25c22",
+                                purple: "#9333ea",
+                            },
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <!-- Custom CSS for marquee and reveal effects -->
+        <style>
+            body {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            .reveal {
+                opacity: 0;
+                transform: translateY(40px);
+                transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .reveal.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .reveal-delay-1 { transition-delay: 0.1s; }
+            .reveal-delay-2 { transition-delay: 0.2s; }
+            .reveal-delay-3 { transition-delay: 0.3s; }
+            .reveal-delay-4 { transition-delay: 0.4s; }
+            .reveal-delay-5 { transition-delay: 0.5s; }
+            .reveal-delay-6 { transition-delay: 0.6s; }
+
+            .glass-nav {
+                background: rgba(255, 255, 255, 0.9);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            .hover-card {
+                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .hover-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+            }
+
+            .marquee-container {
+                overflow: hidden;
+                white-space: nowrap;
+                width: 100%;
+                position: relative;
+            }
+            .marquee-container::before,
+            .marquee-container::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 150px;
+                height: 100%;
+                z-index: 2;
+            }
+            .marquee-container::before {
+                left: 0;
+                background: linear-gradient(to right, white, transparent);
+            }
+            .marquee-container::after {
+                right: 0;
+                background: linear-gradient(to left, white, transparent);
+            }
+            .marquee-content {
+                display: inline-block;
+                animation: marquee 30s linear infinite;
+            }
+            @keyframes marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+            .logo-text {
+                font-family: "Inter", sans-serif;
+                font-weight: 800;
+                font-size: 1.5rem;
+                letter-spacing: -1px;
+                color: #111;
+                margin: 0 40px;
+                display: inline-block;
+                vertical-align: middle;
+                opacity: 0.5;
+                transition: opacity 0.3s;
+            }
+            .logo-text:hover { opacity: 1; }
+
+            /* Masonry CSS for Product Gallery */
+            .masonry-grid {
+                column-count: 1;
+                column-gap: 2rem;
+            }
+            @media (min-width: 768px) {
+                .masonry-grid { column-count: 2; }
+            }
+            @media (min-width: 1024px) {
+                .masonry-grid { column-count: 3; }
+            }
+            .masonry-item {
+                break-inside: avoid;
+                margin-bottom: 2rem;
+                transform: translateZ(0); /* Fix for Safari rendering */
+            }
+        </style>
+    </head>
+    <body class="bg-white text-saisha-dark font-sans selection:bg-saisha-blue selection:text-white">
+        <!-- Navigation Header -->
+        <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="flex items-center justify-between py-2 lg:px-8">
+                    <!-- Sleek Logo -->
+                    <a href="#" class="flex-shrink-0 flex items-center transition-transform hover:scale-105" onclick="window.scrollTo(0,0)">
+                        <img src="STPL_Logo.png" alt="Saisha Technologies" class="h-12 lg:h-16 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <div class="hidden items-end" style="display: none">
+                            <span class="text-2xl font-black tracking-tighter text-saisha-blue">saisha</span>
+                            <span class="text-xs font-medium tracking-widest uppercase ml-1 pb-1 text-saisha-gray font-mono">Beyond Business</span>
+                        </div>
+                    </a>
+
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#problem" class="text-base font-bold text-saisha-blue hover:text-saisha-dark transition-colors">The Problem</a>
+                        <a href="#solution" class="text-base font-bold text-saisha-blue hover:text-saisha-dark transition-colors">Our Model</a>
+                        <a href="#process" class="text-base font-bold text-saisha-blue hover:text-saisha-dark transition-colors">Process</a>
+                        <a href="#sustainability" class="text-base font-bold text-saisha-blue hover:text-saisha-dark transition-colors">Sustainability</a>
+                        <a href="#dna" class="text-base font-bold text-saisha-blue hover:text-saisha-dark transition-colors">Our DNA</a>
+                        <a href="#products" class="text-base font-bold text-saisha-blue hover:text-saisha-dark transition-colors">Products & Gallery</a>
+                        <a href="#contact" class="bg-saisha-dark text-white px-6 py-2.5 rounded-full text-base font-semibold hover:bg-black hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">Book an Audit</a>
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-btn" class="text-saisha-dark hover:text-saisha-blue focus:outline-none">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu (Hidden by default) -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+                <div class="px-4 pt-2 pb-6 space-y-1">
+                    <a href="#problem" class="block px-3 py-2 text-base font-bold text-saisha-blue hover:text-saisha-dark transition-colors">The Problem</a>
+                    <a href="#solution" class="block px-3 py-2 text-base font-bold text-saisha-blue hover:text-saisha-dark transition-colors">Our Model</a>
+                    <a href="#process" class="block px-3 py-2 text-base font-bold text-saisha-blue hover:text-saisha-dark transition-colors">Process</a>
+                    <a href="#sustainability" class="block px-3 py-2 text-base font-bold text-saisha-blue hover:text-saisha-dark transition-colors">Sustainability</a>
+                    <a href="#dna" class="block px-3 py-2 text-base font-bold text-saisha-blue hover:text-saisha-dark transition-colors">Our DNA</a>
+                    <a href="#products" class="block px-3 py-2 text-base font-bold text-saisha-blue hover:text-saisha-dark transition-colors">Products & Gallery</a>
+                    <a href="#contact" class="block px-3 py-2 text-base font-bold text-saisha-blue hover:text-saisha-dark transition-colors">Book an Audit</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="pt-40 lg:pt-48 pb-16 px-4 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
+            <div class="max-w-4xl mx-auto mb-16 relative z-20">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-saisha-light border border-gray-200 text-xs font-semibold tracking-wider uppercase text-saisha-gray mb-8 reveal">
+                    End-to-End Printing & Packaging Consultancy
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-8 text-saisha-dark reveal reveal-delay-1">
+                    Re-engineering Packaging <span class="text-saisha-blue">Architecture.</span>
+                </h1>
+                <p class="text-lg lg:text-xl text-saisha-gray mb-10 max-w-3xl mx-auto leading-relaxed reveal reveal-delay-2">
+                    Moving your enterprise from vendor reliance to strategic margin protection. As your end-to-end consultancy, we manage the entire lifecycle—from adaptive design and regulatory compliance, to high-volume printing and PAN-India hub delivery.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center reveal reveal-delay-3">
+                    <a href="#contact" class="bg-saisha-dark text-white px-8 py-4 rounded-full text-base font-bold text-center hover:bg-black hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">Book a Pilot Audit</a>
+                    <a href="#solution" class="bg-white text-saisha-dark border border-gray-200 px-8 py-4 rounded-full text-base font-bold text-center hover:border-gray-400 transition-all duration-300">Explore Our Model</a>
+                </div>
+            </div>
+
+            <!-- Foreground Video Frame -->
+            <div class="w-full relative z-20 reveal reveal-delay-4">
+                <div class="bg-white p-2 lg:p-4 rounded-[2rem] lg:rounded-[2.5rem] shadow-[0_20px_50px_-10px_rgba(0,0,0,0.15)] border border-gray-100 max-w-5xl mx-auto transform hover:-translate-y-2 transition-transform duration-500">
+                    <div class="w-full rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden relative bg-saisha-light" style="aspect-ratio: 16/9">
+                        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                            <source src="saisha-process.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted By Section -->
+        <section class="py-12 border-y border-gray-100 bg-saisha-light overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 mb-6 text-center">
+                <p class="text-xs font-bold uppercase tracking-widest text-saisha-gray">Trusted Supply Chain Partners to Industry Leaders</p>
+            </div>
+            <div class="marquee-container">
+                <div class="marquee-content font-bold">
+                    <span class="logo-text">Colgate®</span>
+                    <span class="logo-text" style="font-weight: 400">Mondelēz International</span>
+                    <span class="logo-text">Beam SUNTORY</span>
+                    <span class="logo-text">SHOPPERS STOP</span>
+                    <span class="logo-text" style="font-weight: 300; letter-spacing: 2px">WESTSIDE</span>
+                    <span class="logo-text">Equitas</span>
+                    <span class="logo-text" style="font-weight: 600">IndusInd Bank</span>
+                    <!-- Set 2 -->
+                    <span class="logo-text">Colgate®</span>
+                    <span class="logo-text" style="font-weight: 400">Mondelēz International</span>
+                    <span class="logo-text">Beam SUNTORY</span>
+                    <span class="logo-text">SHOPPERS STOP</span>
+                    <span class="logo-text" style="font-weight: 300; letter-spacing: 2px">WESTSIDE</span>
+                    <span class="logo-text">Equitas</span>
+                    <span class="logo-text" style="font-weight: 600">IndusInd Bank</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialized Enterprise Verticals Section -->
+        <section id="verticals" class="py-24 bg-white border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-saisha-blue mb-4">Core Enterprise Verticals</h2>
+                    <h3 class="text-3xl lg:text-4xl font-black tracking-tight text-saisha-dark mb-6">Three Specialized Verticals. One Margin Protection Standard.</h3>
+                    <p class="text-saisha-gray text-base lg:text-lg leading-relaxed">
+                        Whether engineering FMCG retail packaging substrates, executing complex multi-state, high-security financial fulfillment campaigns, or managing precision artwork adaptations, we operate as a direct extension of your procurement team.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Vertical 1: Packaging Architecture -->
+                    <div class="group relative overflow-hidden bg-white rounded-3xl p-8 lg:p-10 border border-gray-200/50 hover-card flex flex-col justify-between reveal reveal-delay-1">
+                        <div class="absolute inset-0 bg-cover bg-center pointer-events-none opacity-25 group-hover:opacity-40 transition-all duration-700 group-hover:scale-105 z-0" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div class="absolute inset-0 bg-gradient-to-tr from-white/95 via-white/85 to-white/40 z-0 pointer-events-none"></div>
+
+                        <div class="relative z-10 flex flex-col h-full justify-between">
+                            <div>
+                                <div class="w-12 h-12 bg-saisha-blue/10 rounded-2xl flex items-center justify-center text-saisha-blue mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                                </div>
+                                <h4 class="text-2xl font-black text-saisha-dark mb-4">Packaging Architecture</h4>
+                                <p class="text-saisha-gray text-sm lg:text-base leading-relaxed mb-6">
+                                    Structural optimization preventing material failure, reducing substrate waste, and improving weight characteristics. We conduct complete structural specification audits.
+                                </p>
+                                <ul class="space-y-3 mb-8">
+                                    <li class="flex items-center text-sm font-semibold text-saisha-dark"><span class="text-green-600 mr-2">✓</span>Primary Cartons, Sleeves & Labels</li>
+                                    <li class="flex items-center text-sm font-semibold text-saisha-dark"><span class="text-green-600 mr-2">✓</span>Material Weight Optimization</li>
+                                    <li class="flex items-center text-sm font-semibold text-saisha-dark"><span class="text-green-600 mr-2">✓</span>Circular & ESG Substitutes</li>
+                                </ul>
+                            </div>
+                            <div class="border-t border-gray-200/50 pt-6 mt-4">
+                                <span class="text-xs font-bold text-saisha-blue uppercase tracking-widest">Sectors: FMCG, Alco-Bev & Retail</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vertical 2: BFSI Secure Sourcing -->
+                    <div class="group relative overflow-hidden bg-white rounded-3xl p-8 lg:p-10 border border-gray-200/50 hover-card flex flex-col justify-between reveal reveal-delay-2">
+                        <div class="absolute inset-0 bg-cover bg-center pointer-events-none opacity-25 group-hover:opacity-40 transition-all duration-700 group-hover:scale-105 z-0" style="background-image: url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div class="absolute inset-0 bg-gradient-to-tr from-white/95 via-white/85 to-white/40 z-0 pointer-events-none"></div>
+
+                        <div class="relative z-10 flex flex-col h-full justify-between">
+                            <div>
+                                <div class="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center text-[#f25c22] mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                                </div>
+                                <h4 class="text-2xl font-black text-saisha-dark mb-4">BFSI Procurement</h4>
+                                <p class="text-saisha-gray text-sm lg:text-base leading-relaxed mb-6">
+                                    Highly secure welcome kit assemblies, pin mailers, bank account books, and EMV smartcard integration. We coordinate end-to-end security protocols.
+                                </p>
+                                <ul class="space-y-3 mb-8">
+                                    <li class="flex items-center text-sm font-semibold text-saisha-dark"><span class="text-[#f25c22] mr-2">✓</span>High-Security Welcome Kits</li>
+                                    <li class="flex items-center text-sm font-semibold text-saisha-dark"><span class="text-[#f25c22] mr-2">✓</span>Secure EMV Smart Card Packaging</li>
+                                    <li class="flex items-center text-sm font-semibold text-saisha-dark"><span class="text-[#f25c22] mr-2">✓</span>Multi-State Tax Compliance</li>
+                                </ul>
+                            </div>
+                            <div class="border-t border-gray-200/50 pt-6 mt-4">
+                                <span class="text-xs font-bold text-[#f25c22] uppercase tracking-widest">Sectors: Banking & Insurance</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vertical 3: Artworking Division -->
+                    <div class="group relative overflow-hidden bg-white rounded-3xl p-8 lg:p-10 border border-gray-200/50 hover-card flex flex-col justify-between reveal reveal-delay-3">
+                        <div class="absolute inset-0 bg-cover bg-center pointer-events-none opacity-25 group-hover:opacity-40 transition-all duration-700 group-hover:scale-105 z-0" style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div class="absolute inset-0 bg-gradient-to-tr from-white/95 via-white/85 to-white/40 z-0 pointer-events-none"></div>
+
+                        <div class="relative z-10 flex flex-col h-full justify-between">
+                            <div>
+                                <div class="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600 mb-6">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                                </div>
+                                <h4 class="text-2xl font-black text-saisha-dark mb-4">Artworking & Reprographics</h4>
+                                <p class="text-saisha-gray text-sm lg:text-base leading-relaxed mb-6">
+                                    Our newly launched premedia division executes high-volume, precision artworking ensuring print-ready perfection across all structural formats and variants.
+                                </p>
+                                <ul class="space-y-3 mb-8">
+                                    <li class="flex items-center text-sm font-semibold text-saisha-dark"><span class="text-purple-600 mr-2">✓</span>Master AW Creation (Print-Ready)</li>
+                                    <li class="flex items-center text-sm font-semibold text-saisha-dark"><span class="text-purple-600 mr-2">✓</span>Repro Graphic & KLD Amendments</li>
+                                    <li class="flex items-center text-sm font-semibold text-saisha-dark"><span class="text-purple-600 mr-2">✓</span>Text, Size & Variant Adaptations</li>
+                                </ul>
+                            </div>
+                            <div class="border-t border-gray-200/50 pt-6 mt-4">
+                                <span class="text-xs font-bold text-purple-600 uppercase tracking-widest">Sectors: Premedia & Studio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enterprise Product Portfolio & Masonry Gallery Section -->
+        <section id="products" class="py-24 bg-saisha-light border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-white border border-gray-200 text-xs font-bold tracking-wider uppercase text-saisha-blue mb-4 shadow-sm">
+                        Visual Portfolio
+                    </div>
+                    <h2 class="text-3xl lg:text-5xl font-black tracking-tight text-saisha-dark mb-6">
+                        Enterprise Product Gallery.
+                    </h2>
+                    <p class="text-saisha-gray text-base lg:text-lg leading-relaxed">
+                        Explore our precision-engineered substrates, retail marketing POSM, and high-security financial print products.
+                    </p>
+                </div>
+
+                <!-- Interactive Tab Controls -->
+                <div class="flex justify-center mb-12 reveal">
+                    <div class="inline-flex flex-wrap justify-center gap-1 bg-white p-1.5 rounded-3xl lg:rounded-full border border-gray-200 shadow-sm relative">
+                        <button id="tab-btn-fmcg" onclick="switchProductTab('fmcg', true)" class="px-6 py-3 rounded-full text-sm font-extrabold transition-all duration-300 bg-blue-600 text-white shadow-md flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                            FMCG & Packaging
+                        </button>
+                        <button id="tab-btn-bfsi" onclick="switchProductTab('bfsi', true)" class="px-6 py-3 rounded-full text-sm font-extrabold transition-all duration-300 text-saisha-gray hover:text-saisha-dark flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                            BFSI Secure Collateral
+                        </button>
+                        <button id="tab-btn-artworking" onclick="switchProductTab('artworking', true)" class="px-6 py-3 rounded-full text-sm font-extrabold transition-all duration-300 text-saisha-gray hover:text-saisha-dark flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                            Artworking & Premedia
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Masonry Gallery: FMCG & Packaging -->
+                <div id="product-panel-fmcg" class="product-tab-content masonry-grid">
+                    
+                    <!-- POSM Item -->
+                    <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[300px]">
+                        <img src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=800&q=80" alt="POSM Displays" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">01</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">POSM & Point of Sale</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Floor standing display units (FSDUs), shelf talkers, wobblers, and branded fixtures.</p>
+                            <button onclick="openProductGallery('fmcg-posm')" class="text-blue-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-blue-900/40 hover:bg-blue-600 px-4 py-2.5 rounded-full border border-blue-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- CTU Item -->
+                    <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[400px]">
+                        <img src="https://images.unsplash.com/photo-1605600659908-0ef719419d41?auto=format&fit=crop&w=800&q=80" alt="Counter Top Units" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">02</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">Counter Top Units (CTU)</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Compact, rigid acrylic and corrugated displays designed for high-visibility checkout counters.</p>
+                            <button onclick="openProductGallery('fmcg-ctu')" class="text-blue-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-blue-900/40 hover:bg-blue-600 px-4 py-2.5 rounded-full border border-blue-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Cartons Item -->
+                    <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[450px]">
+                        <img src="https://images.unsplash.com/photo-1530587191344-9dc12fee5551?auto=format&fit=crop&w=800&q=80" alt="Primary Cartons" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">03</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">Primary & Outer Cartons</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Mono cartons, corrugated outer shippers, window cartons, and specialty foil-stamped boxes.</p>
+                            <button onclick="openProductGallery('fmcg-cartons')" class="text-blue-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-blue-900/40 hover:bg-blue-600 px-4 py-2.5 rounded-full border border-blue-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Labels Item -->
+                    <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[350px]">
+                        <img src="https://images.unsplash.com/photo-1589365278144-c9e705f843ba?auto=format&fit=crop&w=800&q=80" alt="Labels and Pouches" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">04</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">Labels & Flexible Pouches</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Roll-fed self-adhesive labels, shrink sleeves, and eco-friendly recyclable barrier pouches.</p>
+                            <button onclick="openProductGallery('fmcg-labels')" class="text-blue-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-blue-900/40 hover:bg-blue-600 px-4 py-2.5 rounded-full border border-blue-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+                     <!-- Danglers Item -->
+                     <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[300px]">
+                        <img src="https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?auto=format&fit=crop&w=800&q=80" alt="Danglers" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">05</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">Danglers & Shelf Strips</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Die-cut danglers and metallic foil-stamped hangers for overhead retail visibility.</p>
+                            <button onclick="openProductGallery('fmcg-danglers')" class="text-blue-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-blue-900/40 hover:bg-blue-600 px-4 py-2.5 rounded-full border border-blue-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Banners Item -->
+                    <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[300px]">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Banners" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">06</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">Banners & Canopies</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Roll-up banners, vinyl standees, and pop-up backdrops for brand activations.</p>
+                            <button onclick="openProductGallery('fmcg-banners')" class="text-blue-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-blue-900/40 hover:bg-blue-600 px-4 py-2.5 rounded-full border border-blue-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Masonry Gallery: BFSI Secure Collateral -->
+                <div id="product-panel-bfsi" class="product-tab-content hidden masonry-grid">
+                    
+                    <!-- Welcome Kits -->
+                    <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[400px]">
+                        <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=800&q=80" alt="Welcome Kits" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-orange-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">01</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">High-Security Welcome Kits</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Premium onboarding kits with embossed sleeves, smartcard slots, and tamper-evident seals.</p>
+                            <button onclick="openProductGallery('bfsi-kits')" class="text-orange-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-orange-900/40 hover:bg-orange-600 px-4 py-2.5 rounded-full border border-orange-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Passbooks -->
+                    <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[300px]">
+                        <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80" alt="Passbooks" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-orange-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">02</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">Passbooks & Ledgers</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Magnetic-stripe stitched passbooks and savings account books built with archival paper.</p>
+                            <button onclick="openProductGallery('bfsi-passbooks')" class="text-orange-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-orange-900/40 hover:bg-orange-600 px-4 py-2.5 rounded-full border border-orange-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Agreements -->
+                    <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[350px]">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80" alt="Agreements" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-orange-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">03</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">Agreements & Loan Folios</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Multi-page legal agreement booklets and duplicate carbonless NCR forms.</p>
+                            <button onclick="openProductGallery('bfsi-agreements')" class="text-orange-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-orange-900/40 hover:bg-orange-600 px-4 py-2.5 rounded-full border border-orange-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+                     <!-- Stationery -->
+                     <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[300px]">
+                        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80" alt="Stationery" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-orange-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">04</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">Corporate Stationery</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Branded writing pads, desk planners, and memo blocks for branch desks.</p>
+                            <button onclick="openProductGallery('bfsi-stationery')" class="text-orange-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-orange-900/40 hover:bg-orange-600 px-4 py-2.5 rounded-full border border-orange-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Registers -->
+                    <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[350px]">
+                        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80" alt="Registers" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-orange-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">05</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">Audit Registers</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Heavy-duty hardcover vault attendance books and serialized branch audit logs.</p>
+                            <button onclick="openProductGallery('bfsi-registers')" class="text-orange-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-orange-900/40 hover:bg-orange-600 px-4 py-2.5 rounded-full border border-orange-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Slips -->
+                    <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[300px]">
+                        <img src="https://images.unsplash.com/photo-1620228892408-f4cc5e8c1422?auto=format&fit=crop&w=800&q=80" alt="Slips" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-orange-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">06</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">Pay-in Slips</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Cash deposit slipbooks, withdrawal vouchers, and carbonless duplicate receipts.</p>
+                            <button onclick="openProductGallery('bfsi-slips')" class="text-orange-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-orange-900/40 hover:bg-orange-600 px-4 py-2.5 rounded-full border border-orange-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Masonry Gallery: Artworking & Premedia -->
+                <div id="product-panel-artworking" class="product-tab-content hidden masonry-grid">
+                    
+                    <!-- Master AW -->
+                    <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[450px]">
+                        <img src="https://images.unsplash.com/photo-1616423640778-28d1b53229bd?auto=format&fit=crop&w=800&q=80" alt="Master AW" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">01</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">Master AW Creation</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Precise color separation and final copy mapped to printer-specific KLD layouts.</p>
+                            <button onclick="openProductGallery('art-master')" class="text-purple-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-purple-900/40 hover:bg-purple-600 px-4 py-2.5 rounded-full border border-purple-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Repro -->
+                    <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[350px]">
+                        <img src="https://images.unsplash.com/photo-1562564055-71e051d33c19?auto=format&fit=crop&w=800&q=80" alt="Reprographics" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">02</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">Reprographics</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Fogra 39L standard prepress files including expert trapping and color correction.</p>
+                            <button onclick="openProductGallery('art-repro')" class="text-purple-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-purple-900/40 hover:bg-purple-600 px-4 py-2.5 rounded-full border border-purple-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Layout Amend -->
+                    <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[300px]">
+                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80" alt="Layout" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">03</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">Graphic Amendments</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Updating promo flashes on-pack with verified, proper color separation.</p>
+                            <button onclick="openProductGallery('art-layout')" class="text-purple-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-purple-900/40 hover:bg-purple-600 px-4 py-2.5 rounded-full border border-purple-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+                     <!-- Text Amend -->
+                     <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[350px]">
+                        <img src="https://images.unsplash.com/photo-1542435503-956c22dd33c1?auto=format&fit=crop&w=800&q=80" alt="Text" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">04</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">Text Amendments</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Rapid modifications ensuring absolute typographical and regulatory compliance.</p>
+                            <button onclick="openProductGallery('art-text')" class="text-purple-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-purple-900/40 hover:bg-purple-600 px-4 py-2.5 rounded-full border border-purple-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Adaptations -->
+                    <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[300px]">
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80" alt="Adaptations" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">05</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">Variant Adaptations</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Adapting artworks to new SKU formats or flavour swaps across the product line.</p>
+                            <button onclick="openProductGallery('art-variant')" class="text-purple-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-purple-900/40 hover:bg-purple-600 px-4 py-2.5 rounded-full border border-purple-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+                     <!-- Colors -->
+                     <div class="masonry-item group relative rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 min-h-[400px]">
+                        <img src="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?auto=format&fit=crop&w=800&q=80" alt="Colors" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent"></div>
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end text-white z-10">
+                            <div class="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center font-bold text-xs mb-4 shadow-lg">06</div>
+                            <h4 class="text-2xl font-black mb-2 leading-tight">Color Management</h4>
+                            <p class="text-gray-300 text-sm font-medium mb-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Managing custom ink profiles and dot gain for global print consistency.</p>
+                            <button onclick="openProductGallery('art-color')" class="text-purple-400 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center w-max transition-colors cursor-pointer relative z-20 bg-purple-900/40 hover:bg-purple-600 px-4 py-2.5 rounded-full border border-purple-500/30 backdrop-blur-sm">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                Open Image Gallery
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section id="problem" class="py-24 lg:py-32 px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="flex flex-col justify-center">
+                    <div class="max-w-lg mb-8 reveal">
+                        <h2 class="text-3xl lg:text-4xl font-black tracking-tight mb-4">
+                            The Invisible Margin Leak.
+                        </h2>
+                        <p class="text-base text-saisha-gray leading-relaxed">
+                            Legacy packaging supply chains quietly bleed margin. Standard procurement lacks the specialized engineering required to stop it.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-6 max-w-md">
+                        <div class="reveal reveal-delay-1 border-t border-saisha-dark pt-4">
+                            <h3 class="text-lg font-bold mb-1">The Scaling Problem</h3>
+                            <p class="text-saisha-gray text-sm leading-relaxed">Fragmented networks introduce unvetted markups and create capacity bottlenecks.</p>
+                        </div>
+                        <div class="reveal reveal-delay-2 border-t border-saisha-dark pt-4">
+                            <h3 class="text-lg font-bold mb-1">The Quality Gap</h3>
+                            <p class="text-saisha-gray text-sm leading-relaxed">Poorly optimized specifications lead to high batch rejections and brand variance.</p>
+                        </div>
+                        <div class="reveal reveal-delay-3 border-t border-saisha-dark pt-4">
+                            <h3 class="text-lg font-bold mb-1">The Resource Gap</h3>
+                            <p class="text-saisha-gray text-sm leading-relaxed">Internal teams are forced into transactional price negotiations rather than structural cost-savings.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Margin Leak Graphic -->
+                <div class="reveal reveal-delay-2 h-full flex items-center justify-center">
+                    <div class="bg-white rounded-3xl w-full max-w-md h-auto flex items-center justify-center p-4 lg:p-8 group shadow-lg border border-gray-100">
+                        <img
+                            src="margin.png"
+                            alt="Invisible Margin Loss Graphic"
+                            class="w-full h-auto max-h-[350px] object-contain grayscale group-hover:grayscale-0 transition-transform duration-700 group-hover:scale-105"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x350/f5f5f7/0056b3?text=Invisible+Margin+Loss';"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section id="solution" class="py-24 lg:py-32 bg-saisha-blue text-white">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl lg:text-5xl font-black tracking-tight mb-4">The Paradigm Shift</h2>
+                    <p class="text-blue-100 max-w-2xl mx-auto">
+                        Why enterprise brands are moving away from traditional outsourcing agencies to specialized end-to-end packaging consultancies.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 rounded-2xl overflow-hidden shadow-2xl reveal">
+                    <!-- The Old Way -->
+                    <div class="bg-[#111111] p-10 lg:p-16 border border-gray-800 lg:border-r-0">
+                        <h3 class="text-2xl font-bold mb-2">The Outsourcing Agency</h3>
+                        <p class="text-gray-500 mb-8 pb-8 border-b border-gray-800">(The Old Way)</p>
+                        <ul class="space-y-6">
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-4 font-bold text-xl leading-none">×</span>
+                                <div>
+                                    <strong class="block text-gray-200 mb-1">Volume Focused</strong>
+                                    <span class="text-gray-500 text-sm">Objective is simply to sell as many printed boxes and labels as possible.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-4 font-bold text-xl leading-none">×</span>
+                                <div>
+                                    <strong class="block text-gray-200 mb-1">Hidden Margins</strong>
+                                    <span class="text-gray-500 text-sm">They quietly mark up the unit cost of raw materials and print runs.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-4 font-bold text-xl leading-none">×</span>
+                                <div>
+                                    <strong class="block text-gray-200 mb-1">Reactive Quality Control</strong>
+                                    <span class="text-gray-500 text-sm">They only deal with defects <em>after</em> a bad batch is delivered.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- The Saisha Way -->
+                    <div class="bg-white text-saisha-dark p-10 lg:p-16 relative">
+                        <div class="absolute top-0 left-0 w-full h-2 bg-saisha-blue"></div>
+                        <h3 class="text-2xl font-bold mb-2 text-saisha-blue">The Saisha Model</h3>
+                        <p class="text-gray-500 mb-8 pb-8 border-b border-gray-200">(Packaging Consultancy)</p>
+                        <ul class="space-y-6">
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-4 font-bold text-xl leading-none">✓</span>
+                                <div>
+                                    <strong class="block text-saisha-dark mb-1">Lifecycle Focused</strong>
+                                    <span class="text-gray-600 text-sm">Objective is to optimize the entire supply chain, from design specs to final delivery.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-4 font-bold text-xl leading-none">✓</span>
+                                <div>
+                                    <strong class="block text-saisha-dark mb-1">Transparent Advisory</strong>
+                                    <span class="text-gray-600 text-sm">We charge for QA architecture, audits, and generating systemic hard-dollar savings.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-4 font-bold text-xl leading-none">✓</span>
+                                <div>
+                                    <strong class="block text-saisha-dark mb-1">Proactive Engineering</strong>
+                                    <span class="text-gray-600 text-sm">We manage compliances and First-Time-Right protocols <em>before</em> the press runs.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="py-24 lg:py-32 px-6 lg:px-8 max-w-7xl mx-auto bg-white border-b border-gray-100">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl lg:text-5xl font-black tracking-tight mb-4 text-saisha-dark">Smart Sourcing Architecture.</h2>
+                    <p class="text-saisha-gray text-lg">A true end-to-end framework designed to eliminate systemic waste at every stage.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden hover-card group reveal reveal-delay-1 flex flex-col">
+                    <div class="h-48 lg:h-56 overflow-hidden relative">
+                        <img src="image_19b5a4.jpg" alt="Adaptive Design and Compliance" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" onerror="this.onerror=null; this.src='https://placehold.co/600x400/f5f5f7/0056b3?text=Adaptive+Design';" />
+                    </div>
+                    <div class="p-6 lg:p-8 relative flex-grow">
+                        <span class="text-saisha-blue font-bold text-sm tracking-widest mb-2 block font-mono">01</span>
+                        <h4 class="text-xl font-bold text-slate-900 mb-3">Adaptive Design & Compliance</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">We engineer adaptive packaging designs, conduct rigorous material audits, and manage regulatory compliances to guarantee First-Time-Right production.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden hover-card group reveal reveal-delay-2 flex flex-col">
+                    <div class="h-48 lg:h-56 overflow-hidden relative">
+                        <img src="floor-displays-group.png" alt="High Volume Printing and POSM" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" onerror="this.onerror=null; this.src='https://placehold.co/600x400/f5f5f7/0056b3?text=Printing+and+POSM';" />
+                    </div>
+                    <div class="p-6 lg:p-8 relative flex-grow">
+                        <span class="text-saisha-blue font-bold text-sm tracking-widest mb-2 block font-mono">02</span>
+                        <h4 class="text-xl font-bold text-slate-900 mb-3">High-Volume Printing & POSM</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">Executing flawless primary packaging and Trade Marketing materials. We consolidate fragmented networks to eliminate middleman markups and ensure consistency.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden hover-card group reveal reveal-delay-3 flex flex-col">
+                    <div class="h-48 lg:h-56 overflow-hidden relative">
+                        <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Digital Dashboard Analytics" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                    </div>
+                    <div class="p-6 lg:p-8 relative flex-grow">
+                        <span class="text-saisha-blue font-bold text-sm tracking-widest mb-2 block font-mono">03</span>
+                        <h4 class="text-xl font-bold text-slate-900 mb-3">Digital QA & Command</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">Deploying custom workflow automation to provide Head Office with centralized P&L command, quality assurance tracking, and real-time visibility into indents.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden hover-card group reveal reveal-delay-4 flex flex-col">
+                    <div class="h-48 lg:h-56 overflow-hidden relative">
+                        <img src="image_194548.jpg" alt="Strategic Sourcing JIT" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" onerror="this.onerror=null; this.src='https://placehold.co/600x400/f5f5f7/0056b3?text=Strategic+Sourcing';" />
+                    </div>
+                    <div class="p-6 lg:p-8 relative flex-grow">
+                        <span class="text-saisha-blue font-bold text-sm tracking-widest mb-2 block font-mono">04</span>
+                        <h4 class="text-xl font-bold text-slate-900 mb-3">Strategic Sourcing (JIT)</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">Moving beyond basic cost reductions. We align product development and predictive sourcing to ensure materials are manufactured precisely when needed.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden hover-card group reveal reveal-delay-5 flex flex-col">
+                    <div class="h-48 lg:h-56 overflow-hidden relative">
+                        <img src="PanIndiaLogistics.png" alt="PAN India Hub Delivery" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" onerror="this.onerror=null; this.src='https://placehold.co/600x400/f5f5f7/0056b3?text=PAN+India+Logistics';" />
+                    </div>
+                    <div class="p-6 lg:p-8 relative flex-grow">
+                        <span class="text-saisha-blue font-bold text-sm tracking-widest mb-2 block font-mono">05</span>
+                        <h4 class="text-xl font-bold text-slate-900 mb-3">PAN-India Hub Delivery</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">Flawless last-mile distribution. We manage the complex logistics of securely delivering your print and POSM assets directly to regional hubs across all 28 states.</p>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden hover-card group reveal reveal-delay-6 flex flex-col">
+                    <div class="h-48 lg:h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sustainability and ESG Engineering" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                    </div>
+                    <div class="p-6 lg:p-8 relative flex-grow">
+                        <span class="text-saisha-blue font-bold text-sm tracking-widest mb-2 block font-mono">06</span>
+                        <h4 class="text-xl font-bold text-slate-900 mb-3">Supply Chain Auditing</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">Conducting rigorous audits of your existing packaging specifications to identify structural inefficiencies and material waste.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sustainability & ESG Section -->
+        <section id="sustainability" class="py-24 relative bg-emerald-900 text-white overflow-hidden">
+            <!-- Background elements -->
+            <div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-emerald-950 via-emerald-900/95 to-emerald-900/80"></div>
+            
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="reveal">
+                        <div class="inline-block px-4 py-1.5 rounded-full bg-emerald-800/50 border border-emerald-700/50 text-xs font-bold tracking-wider uppercase text-emerald-300 mb-6 backdrop-blur-sm shadow-sm">
+                            Environmental Stewardship
+                        </div>
+                        <h2 class="text-3xl lg:text-5xl font-black tracking-tight mb-6">
+                            Responsible Production.<br/>Circular Solutions.
+                        </h2>
+                        <p class="text-emerald-100 text-lg leading-relaxed mb-8">
+                            We recognize the environmental footprint of the global print and packaging industry. At Saisha Technologies, we actively engineer solutions to minimize waste, maximize paper recyclability, and champion responsible sourcing.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 reveal reveal-delay-2">
+                        <!-- Card 1 -->
+                        <div class="bg-emerald-800/40 backdrop-blur-sm border border-emerald-700/50 p-6 rounded-3xl hover:bg-emerald-800/60 transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-700/50 text-emerald-300 flex items-center justify-center font-bold text-lg mb-5">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-2">Responsible Sourcing</h4>
+                            <p class="text-emerald-100/80 text-sm leading-relaxed">Prioritizing FSC® certified paper and sustainable forestry practices across our vetted multi-state vendor network.</p>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="bg-emerald-800/40 backdrop-blur-sm border border-emerald-700/50 p-6 rounded-3xl hover:bg-emerald-800/60 transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-700/50 text-emerald-300 flex items-center justify-center font-bold text-lg mb-5">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-2">Material Recycling</h4>
+                            <p class="text-emerald-100/80 text-sm leading-relaxed">Transitioning clients to easily recyclable monomaterials and replacing harmful plastics in high-volume POSM.</p>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="bg-emerald-800/40 backdrop-blur-sm border border-emerald-700/50 p-6 rounded-3xl hover:bg-emerald-800/60 transition-colors sm:col-span-2 flex flex-col sm:flex-row gap-5 items-start sm:items-center">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-700/50 text-emerald-300 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-1">Structural Light-weighting</h4>
+                                <p class="text-emerald-100/80 text-sm leading-relaxed">Re-engineering packaging KLDs to reduce paper weight (GSM) and dimensions, slashing both material waste and transit carbon footprints.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DNA Section -->
+        <section id="dna" class="py-24 border-t border-gray-100 bg-white">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="reveal">
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-saisha-blue mb-4">The Saisha DNA</h2>
+                        <h3 class="text-3xl lg:text-4xl font-black tracking-tight mb-6">22+ Years of Enterprise Procurement Experience.</h3>
+                        <p class="text-saisha-gray text-lg leading-relaxed mb-6">
+                            We don't just act as vendors; we act as an internal extension of your executive team. Our mission is to protect client margins by engineering zero-defect procurement systems from <em>your</em> side of the table.
+                        </p>
+                        <p class="text-saisha-gray text-lg leading-relaxed mb-8">
+                            Our research-driven, agile approach has successfully managed operations for multinational companies, driving productivity enhancements that result in substantial, hard-dollar commercial savings.
+                        </p>
+
+                        <div class="flex items-center gap-6 pt-6 border-t border-gray-100">
+                            <div>
+                                <div class="text-3xl font-black text-saisha-dark mb-1 font-mono">100+</div>
+                                <div class="text-xs font-semibold text-saisha-gray uppercase tracking-wider">Vetted Suppliers</div>
+                            </div>
+                            <div class="w-px h-12 bg-gray-200"></div>
+                            <div>
+                                <div class="text-3xl font-black text-saisha-dark mb-1">PAN</div>
+                                <div class="text-xs font-semibold text-saisha-gray uppercase tracking-wider">India Execution</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reveal reveal-delay-2 relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden group shadow-xl bg-saisha-light">
+                        <img
+                            src="consultative.jpg"
+                            alt="Consultative Architecture"
+                            class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-transform duration-700 group-hover:scale-105"
+                            onerror="this.src='https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-8 text-left z-10">
+                            <h4 class="text-2xl font-bold mb-2 text-white">Consultative, Not Outsourced.</h4>
+                            <p class="text-gray-200 text-sm max-w-sm">We provide transparent advisory and vendor restructuring, not middleman markup services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact & Sourcing Request Section -->
+        <section id="contact" class="py-24 lg:py-32 bg-saisha-light border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Contact Info -->
+                <div class="reveal flex flex-col justify-center">
+                    <h2 class="text-3xl lg:text-4xl font-black tracking-tight mb-4 text-saisha-dark">Let's optimize your supply chain.</h2>
+                    <p class="text-saisha-gray text-lg mb-10 leading-relaxed">
+                        Ready to source high-impact POSM, packaging, or secure BFSI collateral? Reach out to our executive sourcing team to get custom pricing or schedule a preliminary supply chain audit.
+                    </p>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center border border-gray-200 shadow-sm mr-4 flex-shrink-0">
+                                <svg class="w-5 h-5 text-saisha-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 00-2 2z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-saisha-dark mb-1">Direct Email</h4>
+                                <a href="mailto:Marketing@saishatech.in" class="text-saisha-gray hover:text-saisha-blue transition-colors">Marketing@saishatech.in</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center border border-gray-200 shadow-sm mr-4 flex-shrink-0">
+                                <svg class="w-5 h-5 text-saisha-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-saisha-dark mb-1">Corporate Headquarters</h4>
+                                <address class="not-italic text-saisha-gray leading-relaxed">
+                                    Saisha Technologies Pvt Ltd.,<br />
+                                    1710, Plan S Business Park, MIDC,<br />
+                                    Opp DY Patil Stadium,<br />
+                                    Navi Mumbai - 400706,<br />
+                                    Maharashtra, India.
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web3Forms Form Card -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden reveal border border-slate-100">
+                    <div class="p-10 lg:p-12">
+                        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                            <!-- Web3Forms Access Key -->
+                            <input type="hidden" name="access_key" value="be90505f-02b7-40bf-89d6-78b24fd5dee0" />
+                            <input type="hidden" name="subject" value="New Sourcing & Supply Requirement - Saisha Tech" />
+                            <input type="hidden" name="from_name" value="Saisha Sourcing Desk" />
+                            <!-- Spam Honeypot -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none" />
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-bold text-saisha-dark mb-2">Full Name</label>
+                                    <input type="text" name="name" required placeholder="Jane Doe" class="w-full bg-saisha-light border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-saisha-blue focus:border-transparent transition-all" />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-saisha-dark mb-2">Company</label>
+                                    <input type="text" name="company" required placeholder="Your Enterprise" class="w-full bg-saisha-light border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-saisha-blue focus:border-transparent transition-all" />
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-bold text-saisha-dark mb-2">Corporate Email</label>
+                                    <input type="email" name="email" required placeholder="jane@company.com" class="w-full bg-saisha-light border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-saisha-blue focus:border-transparent transition-all" />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-saisha-dark mb-2">Select Vertical / Requirement</label>
+                                    <select name="vertical" required class="w-full bg-saisha-light border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-saisha-blue focus:border-transparent transition-all cursor-pointer text-sm font-medium">
+                                        <option value="" disabled selected>Choose Vertical...</option>
+                                        <option value="Product Supply (POSM, Packaging & BFSI)">Product Supply (POSM, Packaging & BFSI)</option>
+                                        <option value="Packaging Architecture">Packaging Architecture</option>
+                                        <option value="BFSI End-to-End Procurement">BFSI End-to-End Procurement</option>
+                                        <option value="Artworking & Premedia Services">Artworking & Premedia Services</option>
+                                        <option value="Supply Chain Audit & Margin Protection">Supply Chain Audit & Margin Protection</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-bold text-saisha-dark mb-2">Requirement Specifications</label>
+                                <textarea name="message" required rows="4" placeholder="Share your product line requirements, estimated volumes, or current procurement challenges..." class="w-full bg-saisha-light border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-saisha-blue focus:border-transparent transition-all resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-saisha-dark text-white rounded-lg px-8 py-4 font-bold text-lg hover:bg-black hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-gray-200">
+                                Initiate Sourcing Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-saisha-black text-gray-400 py-12 border-t border-gray-900 text-center text-sm bg-[#0a0a0a]">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+                <a href="#" class="bg-white p-3 rounded-xl inline-block transition-transform hover:scale-105" onclick="window.scrollTo(0,0)">
+                    <img src="STPL_Logo.png" alt="Saisha Technologies" class="h-16 lg:h-20 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                    <div class="hidden font-bold text-saisha-dark text-lg tracking-tight" style="display: none">Saisha.</div>
+                </a>
+                <p>&copy; 2026 Saisha Technologies Pvt Ltd. Navi Mumbai, India. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="mailto:Marketing@saishatech.in" class="hover:text-white transition-colors">Marketing@saishatech.in</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Gallery Lightbox Modal -->
+        <div id="gallery-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4 transition-opacity duration-300 opacity-0 pointer-events-none">
+            <div class="relative w-full max-w-6xl bg-white/5 rounded-3xl overflow-hidden shadow-2xl border border-white/10 flex flex-col max-h-[90vh] pointer-events-auto transform transition-transform duration-300 scale-95" id="gallery-modal-content">
+                <!-- Header -->
+                <div class="flex justify-between items-center p-6 border-b border-white/10 bg-black/50">
+                    <h3 id="gallery-modal-title" class="text-2xl font-black text-white tracking-tight">Product Gallery</h3>
+                    <button onclick="closeProductGallery()" class="text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full p-2 transition-all">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+                <!-- Scrollable Grid -->
+                <div class="p-6 overflow-y-auto flex-1">
+                    <div id="gallery-modal-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Images injected via JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll, Layout & Tab Controller Script -->
+        <script>
+            // Product Portfolio Tab Switcher with Smart Auto-Rotate
+            let autoTabInterval;
+            const productTabs = ['fmcg', 'bfsi', 'artworking'];
+            const tabActiveColors = {
+                'fmcg': 'bg-blue-600 text-white shadow-md',
+                'bfsi': 'bg-orange-600 text-white shadow-md',
+                'artworking': 'bg-purple-600 text-white shadow-md'
+            };
+            let currentTabIndex = 0;
+            let isUserControlled = false;
+
+            window.switchProductTab = function(category, isManual = false) {
+                if (isManual) {
+                    // Permanently stop auto-rotating if the user takes control
+                    isUserControlled = true;
+                    clearInterval(autoTabInterval);
+                }
+
+                productTabs.forEach((tab, index) => {
+                    const btn = document.getElementById(`tab-btn-${tab}`);
+                    const panel = document.getElementById(`product-panel-${tab}`);
+                    
+                    if (!btn || !panel) return;
+
+                    if (tab === category) {
+                        btn.className = `px-6 py-3 rounded-full text-sm font-extrabold transition-all duration-300 flex items-center gap-2 ${tabActiveColors[tab]}`;
+                        panel.classList.remove("hidden");
+                        currentTabIndex = index;
+                    } else {
+                        btn.className = "px-6 py-3 rounded-full text-sm font-extrabold transition-all duration-300 text-saisha-gray hover:text-saisha-dark flex items-center gap-2 bg-white";
+                        panel.classList.add("hidden");
+                    }
+                });
+            };
+
+            function startAutoTabs() {
+                if (isUserControlled) return; // Don't start if user clicked
+                
+                clearInterval(autoTabInterval);
+                autoTabInterval = setInterval(() => {
+                    if (isUserControlled) {
+                        clearInterval(autoTabInterval);
+                        return;
+                    }
+                    let nextIndex = (currentTabIndex + 1) % productTabs.length;
+                    window.switchProductTab(productTabs[nextIndex], false);
+                }, 3500); // 3.5 seconds
+            }
+
+            // Wait for DOM to load, then use IntersectionObserver to only animate when in view
+            document.addEventListener("DOMContentLoaded", () => {
+                const productsSection = document.getElementById('products');
+                if (productsSection && window.IntersectionObserver) {
+                    const observer = new IntersectionObserver((entries) => {
+                        if (entries[0].isIntersecting) {
+                            startAutoTabs(); // Start cycling when scrolled into view
+                        } else {
+                            clearInterval(autoTabInterval); // Pause when scrolled away
+                        }
+                    }, { threshold: 0.15 });
+                    observer.observe(productsSection);
+                } else {
+                    // Fallback for older browsers
+                    startAutoTabs();
+                }
+            });
+
+            // Scroll Reveal Animation
+            function reveal() {
+                var reveals = document.querySelectorAll(".reveal");
+                for (var i = 0; i < reveals.length; i++) {
+                    var windowHeight = window.innerHeight;
+                    var elementTop = reveals[i].getBoundingClientRect().top;
+                    var elementVisible = 100;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveals[i].classList.add("active");
+                    }
+                }
+            }
+            window.addEventListener("scroll", reveal);
+            reveal(); // Trigger on load
+
+            // Mobile Menu Toggle with Null-Guards
+            const btn = document.getElementById("mobile-menu-btn");
+            const menu = document.getElementById("mobile-menu");
+
+            if (btn && menu) {
+                btn.addEventListener("click", () => {
+                    menu.classList.toggle("hidden");
+                });
+
+                // Close mobile menu on link click
+                menu.querySelectorAll("a").forEach((link) => {
+                    link.addEventListener("click", () => {
+                        menu.classList.add("hidden");
+                    });
+                });
+            }
+
+            // Navbar blur effect on scroll with Null-Guard
+            const navbar = document.getElementById("navbar");
+            if (navbar) {
+                window.addEventListener("scroll", () => {
+                    if (window.scrollY > 10) {
+                        navbar.classList.add("shadow-sm");
+                    } else {
+                        navbar.classList.remove("shadow-sm");
+                    }
+                });
+            }
+
+            // --- Product Image Gallery Logic ---
+            const galleryData = {
+                'fmcg-posm': {
+                    title: 'POSM & Point of Sale Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'fmcg-ctu': {
+                    title: 'Counter Top Units Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1605600659908-0ef719419d41?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1607344645866-bea1b490f2ce?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'fmcg-cartons': {
+                    title: 'Primary Cartons Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1530587191344-9dc12fee5551?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1628102491629-77858ab21d3f?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1585255474665-27a3c301662d?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'fmcg-labels': {
+                    title: 'Labels & Flexible Pouches Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1589365278144-c9e705f843ba?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1585255318111-bd56a297b69c?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1614735241165-6756e1df61ab?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'fmcg-danglers': {
+                    title: 'Danglers & Hangers Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1580196969807-cc6de06c05be?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'fmcg-banners': {
+                    title: 'Banners & Standees Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'bfsi-kits': {
+                    title: 'Welcome Kits Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'bfsi-passbooks': {
+                    title: 'Passbooks & Ledgers Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1628151015968-3a4429e9ef04?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'bfsi-agreements': {
+                    title: 'Agreements & Loan Folios Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'bfsi-stationery': {
+                    title: 'Corporate Stationery Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'bfsi-registers': {
+                    title: 'Audit Registers Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'bfsi-slips': {
+                    title: 'Pay-in Slips Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1620228892408-f4cc5e8c1422?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'art-master': {
+                    title: 'Master AW Creation Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1616423640778-28d1b53229bd?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'art-repro': {
+                    title: 'Reprographics Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1562564055-71e051d33c19?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1616423640778-28d1b53229bd?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'art-layout': {
+                    title: 'Graphic Amendments Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'art-text': {
+                    title: 'Text Amendments Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1542435503-956c22dd33c1?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1455309036818-6052248ce580?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'art-variant': {
+                    title: 'Variant Adaptations Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1614735241165-6756e1df61ab?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1585255318111-bd56a297b69c?auto=format&fit=crop&w=800&q=80'
+                    ]
+                },
+                'art-color': {
+                    title: 'Color Management Gallery',
+                    images: [
+                        'https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1562564055-71e051d33c19?auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1616423640778-28d1b53229bd?auto=format&fit=crop&w=800&q=80'
+                    ]
+                }
+            };
+
+            function openProductGallery(categoryId) {
+                const modal = document.getElementById('gallery-modal');
+                const modalContent = document.getElementById('gallery-modal-content');
+                const titleEl = document.getElementById('gallery-modal-title');
+                const gridEl = document.getElementById('gallery-modal-grid');
+                const data = galleryData[categoryId];
+
+                if (!data || !modal) return;
+
+                // Populate title
+                titleEl.textContent = data.title;
+
+                // Populate images
+                gridEl.innerHTML = '';
+                data.images.forEach((imgUrl, index) => {
+                    gridEl.innerHTML += `
+                        <div class="rounded-2xl overflow-hidden bg-black/50 border border-white/10 group relative aspect-[4/3]">
+                            <img src="${imgUrl}" alt="Gallery Image ${index + 1}" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+                        </div>
+                    `;
+                });
+
+                // Show modal with animation
+                modal.classList.remove('hidden');
+                // Small delay to allow display:block to apply before animating opacity
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0', 'pointer-events-none');
+                    modalContent.classList.remove('scale-95');
+                }, 10);
+                
+                // Prevent background scrolling
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeProductGallery() {
+                const modal = document.getElementById('gallery-modal');
+                const modalContent = document.getElementById('gallery-modal-content');
+                
+                if (!modal) return;
+
+                // Hide with animation
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                modalContent.classList.add('scale-95');
+                
+                // Wait for animation to finish before hiding completely
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+
+            // Close modal when clicking outside the content
+            document.getElementById('gallery-modal')?.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeProductGallery();
+                }
+            });
+        </script>
+    </body>
+</html>
