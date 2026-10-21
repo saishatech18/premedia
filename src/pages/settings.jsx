@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from '../components/layout/Navbar';
+import Navbar from '../components/layout/navbar.jsx';
 
 export default function Settings() {
   const [email, setEmail] = useState('');
