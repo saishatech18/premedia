@@ -134,21 +134,58 @@ const StatusBadge = ({ status }) => {
 };
 
 const SettingsDashboard = ({ users, setUsers }) => {
+  const [newUserEmail, setNewUserEmail] = useState('');
+  const [newUserPassword, setNewUserPassword] = useState('');
   const [newUserName, setNewUserName] = useState('');
   const [newUserRole, setNewUserRole] = useState(ROLES.CSO);
+  const [statusMsg, setStatusMsg] = useState('');
 
-  const handleCreateUser = (e) => {
+  const handleCreateUser = async (e) => {
     e.preventDefault();
-    if (!newUserName.trim()) return;
+    if (!newUserEmail.trim() || !newUserPassword.trim()) return;
     
-    const newUser = {
-      id: `u_${Date.now()}`,
-      name: newUserName,
-      role: newUserRole
-    };
-    
-    setUsers([...users, newUser]);
-    setNewUserName('');
+    // Map frontend role to database role_id (1: admin, 2: designer, 3: client)
+    let dbRoleId = 3; 
+    if (newUserRole === ROLES.ADMIN) dbRoleId = 1;
+    else if ([ROLES.CSO, ROLES.OPERATOR, ROLES.QC].includes(newUserRole)) dbRoleId = 2;
+
+    try {
+      // 1. Send data to your FastAPI backend
+      const response = await fetch('http://127.0.0.1:8000/users/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: newUserEmail,
+          password: newUserPassword,
+          role_id: dbRoleId
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.detail || 'Database error');
+      }
+
+      const savedDbUser = await response.json();
+      
+      // 2. Update local frontend state to instantly show the new user in the table
+      const newUser = {
+        id: `u_${savedDbUser.id}`,
+        name: newUserName || newUserEmail.split('@')[0],
+        role: newUserRole
+      };
+      
+      setUsers([...users, newUser]);
+      setNewUserEmail('');
+      setNewUserPassword('');
+      setNewUserName('');
+      setStatusMsg('User successfully created in database!');
+      setTimeout(() => setStatusMsg(''), 4000);
+      
+    } catch (error) {
+      setStatusMsg(`Error: ${error.message}`);
+      setTimeout(() => setStatusMsg(''), 4000);
+    }
   };
 
   const handleDeleteUser = (id) => {
@@ -172,25 +209,27 @@ const SettingsDashboard = ({ users, setUsers }) => {
           <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center">
             <Icon name="User" className="w-5 h-5 mr-2 text-indigo-500" /> Create New User
           </h3>
+          {statusMsg && (
+            <div className={`p-3 mb-4 text-sm font-bold rounded-lg ${statusMsg.includes('Error') ? 'bg-rose-100 text-rose-700' : 'bg-emerald-100 text-emerald-700'}`}>
+              {statusMsg}
+            </div>
+          )}
           <form onSubmit={handleCreateUser} className="space-y-4">
             <div>
-              <label className="block text-sm font-bold text-slate-700 mb-2">Full Name</label>
-              <input 
-                required 
-                type="text" 
-                value={newUserName}
-                onChange={e => setNewUserName(e.target.value)}
-                placeholder="e.g. John Doe"
-                className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-indigo-500 bg-slate-50 outline-none" 
-              />
+              <label className="block text-sm font-bold text-slate-700 mb-2">Email Address</label>
+              <input required type="email" value={newUserEmail} onChange={e => setNewUserEmail(e.target.value)} placeholder="user@company.com" className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-indigo-500 bg-slate-50 outline-none" />
+            </div>
+            <div>
+              <label className="block text-sm font-bold text-slate-700 mb-2">Password</label>
+              <input required type="password" value={newUserPassword} onChange={e => setNewUserPassword(e.target.value)} placeholder="••••••••" className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-indigo-500 bg-slate-50 outline-none" />
+            </div>
+            <div>
+              <label className="block text-sm font-bold text-slate-700 mb-2">Display Name (Optional)</label>
+              <input type="text" value={newUserName} onChange={e => setNewUserName(e.target.value)} placeholder="e.g. John Doe" className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-indigo-500 bg-slate-50 outline-none" />
             </div>
             <div>
               <label className="block text-sm font-bold text-slate-700 mb-2">Assign System Role</label>
-              <select 
-                value={newUserRole}
-                onChange={e => setNewUserRole(e.target.value)}
-                className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-indigo-500 bg-slate-50 outline-none cursor-pointer"
-              >
+              <select value={newUserRole} onChange={e => setNewUserRole(e.target.value)} className="w-full p-3 border rounded-xl focus:ring-2 focus:ring-indigo-500 bg-slate-50 outline-none cursor-pointer">
                 {Object.values(ROLES).map(role => (
                   <option key={role} value={role}>{role}</option>
                 ))}
@@ -227,11 +266,7 @@ const SettingsDashboard = ({ users, setUsers }) => {
                       </span>
                     </td>
                     <td className="p-4">
-                      <button 
-                        onClick={() => handleDeleteUser(user.id)}
-                        disabled={user.id === 'u_admin_1'}
-                        className="text-rose-600 hover:text-rose-800 font-bold text-xs disabled:opacity-30 disabled:cursor-not-allowed"
-                      >
+                      <button onClick={() => handleDeleteUser(user.id)} disabled={user.id === 'u_admin_1'} className="text-rose-600 hover:text-rose-800 font-bold text-xs disabled:opacity-30 disabled:cursor-not-allowed">
                         Revoke Access
                       </button>
                     </td>
