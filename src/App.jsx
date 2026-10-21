@@ -1,22 +1,30 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Login from './pages/login';
-import Settings from './pages/settings';
+import Login from './pages/login.jsx';
+import Settings from './pages/settings.jsx';
+import ProtectedRoute from './routes/protectedroute.jsx';
 
 export default function App() {
   return (
     <BrowserRouter basename="/premedia">
       <Routes>
-        {/* Default route redirects straight to login */}
+        {/* Default route */}
         <Route path="/" element={<Navigate to="/login" replace />} />
 
-        {/* Auth Route */}
-        <Route path="/login" element={<login />} />
+        {/* Public Route */}
+        <Route path="/login" element={<Login />} />
 
-        {/* Settings & User Management Route */}
-        <Route path="/settings" element={<settings />} />
+        {/* Protected Routes */}
+        <Route
+          path="/settings"
+          element={
+            <ProtectedRoute>
+              <Settings />
+            </ProtectedRoute>
+          }
+        />
 
-        {/* Catch-all route redirects back to login */}
+        {/* Catch-all redirect */}
         <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </BrowserRouter>

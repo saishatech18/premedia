@@ -24,7 +24,6 @@ export default function Settings() {
     }
   };
 
-  // Load existing users on page mount
   useEffect(() => {
     fetchUsers();
   }, []);
@@ -55,7 +54,6 @@ export default function Settings() {
         });
         setEmail('');
         setPassword('');
-        // Automatically refresh user list table
         fetchUsers();
       } else {
         setStatus({
@@ -71,19 +69,32 @@ export default function Settings() {
     }
   };
 
+  const getRoleBadgeClass = (roleName) => {
+    switch (roleName) {
+      case 'Admin':
+        return 'bg-purple-100 text-purple-800 border-purple-200';
+      case 'Production':
+        return 'bg-blue-100 text-blue-800 border-blue-200';
+      case 'Quality':
+        return 'bg-emerald-100 text-emerald-800 border-emerald-200';
+      case 'Client':
+        return 'bg-amber-100 text-amber-800 border-amber-200';
+      default:
+        return 'bg-slate-100 text-slate-800 border-slate-200';
+    }
+  };
+
   return (
     <div className="min-h-screen bg-slate-50">
-      {/* Top Navigation Bar */}
       <Navbar />
 
-      {/* Main Settings Content */}
       <main className="p-8 max-w-5xl mx-auto space-y-8">
         <div>
           <h1 className="text-2xl font-bold text-slate-800">Settings & User Management</h1>
           <p className="text-sm text-slate-500">Create team members and manage role permissions.</p>
         </div>
 
-        {/* User Creation Form Card */}
+        {/* User Creation Form */}
         <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
           <h2 className="text-lg font-semibold text-slate-800 mb-4">Add New User</h2>
 
@@ -170,21 +181,28 @@ export default function Settings() {
                   <tr className="border-b border-slate-200 text-slate-500 font-medium">
                     <th className="py-3 px-4">User ID</th>
                     <th className="py-3 px-4">Email</th>
-                    <th className="py-3 px-4">Role ID</th>
+                    <th className="py-3 px-4">Assigned Role</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
-                  {users.map((item) => (
-                    <tr key={item.id} className="hover:bg-slate-50 transition">
-                      <td className="py-3 px-4 text-slate-400 font-mono text-xs">{item.id}</td>
-                      <td className="py-3 px-4 text-slate-800 font-medium">{item.email}</td>
-                      <td className="py-3 px-4">
-                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
-                          {item.role || item.role_id}
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
+                  {users.map((item) => {
+                    const roleName = item.role?.name || `Role #${item.role_id}`;
+                    return (
+                      <tr key={item.id} className="hover:bg-slate-50 transition">
+                        <td className="py-3 px-4 text-slate-400 font-mono text-xs">{item.id}</td>
+                        <td className="py-3 px-4 text-slate-800 font-medium">{item.email}</td>
+                        <td className="py-3 px-4">
+                          <span
+                            className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold border ${getRoleBadgeClass(
+                              roleName
+                            )}`}
+                          >
+                            {roleName}
+                          </span>
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>

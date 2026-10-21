@@ -1,10 +1,30 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
   const location = useLocation();
+  const navigate = useNavigate();
+  const [userEmail, setUserEmail] = useState('');
+
+  useEffect(() => {
+    // Read the logged in user from localStorage
+    const savedUser = localStorage.getItem('currentUser');
+    if (savedUser) {
+      try {
+        const parsed = JSON.parse(savedUser);
+        setUserEmail(parsed.email || '');
+      } catch (err) {
+        console.error('Failed to parse user session:', err);
+      }
+    }
+  }, []);
 
   const isActive = (path) => location.pathname === path;
+
+  const handleSignOut = () => {
+    localStorage.removeItem('currentUser');
+    navigate('/login');
+  };
 
   return (
     <header className="bg-white border-b border-slate-200">
@@ -18,7 +38,7 @@ export default function Navbar() {
             <span className="text-xl font-bold text-slate-800">Premedia Hub</span>
           </div>
 
-          {/* Navigation Links */}
+          {/* Navigation Links & User Badge */}
           <nav className="flex space-x-4 items-center">
             <Link
               to="/settings"
@@ -31,12 +51,18 @@ export default function Navbar() {
               User Management
             </Link>
 
-            <Link
-              to="/login"
-              className="text-sm font-medium text-slate-500 hover:text-slate-700 px-3 py-2"
+            {userEmail && (
+              <span className="text-xs bg-slate-100 text-slate-600 px-3 py-1.5 rounded-full font-mono border border-slate-200">
+                {userEmail}
+              </span>
+            )}
+
+            <button
+              onClick={handleSignOut}
+              className="text-sm font-medium text-slate-500 hover:text-red-600 px-3 py-2 transition"
             >
               Sign Out
-            </Link>
+            </button>
           </nav>
         </div>
       </div>
